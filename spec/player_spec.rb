@@ -1,6 +1,7 @@
 require "player"
 
 describe Player do
+  let(:game) {Game.new}
   subject(:charlie) { Player.new("Charlie") }
   subject(:gary) { Player.new("Gary") }
 
@@ -16,17 +17,12 @@ describe Player do
       expect(charlie.hp).to eq 60
     end
   end
-
-  describe "#attack" do
-    it "attacks a player" do
-      expect(gary).to receive(:take_damage)
-      charlie.attack(gary)
-    end
-  end
-
+  
   describe "#take_damage" do
     it "reduces hitpoints when attacked" do
-      expect { charlie.attack(gary) }.to change { gary.hp }.by(-10)
+      expect { game.attack(gary) }.to change { gary.hp }.by(-10)
     end
   end
+
+ 
 end
