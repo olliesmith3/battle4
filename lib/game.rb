@@ -15,6 +15,7 @@ class Game
 
   def switch
     @player.reverse!
+    @current_player = @player.first
     
     #@current_player = @player_2 if @current_player == @player_1
   end

@@ -27,7 +27,6 @@ class Battle < Sinatra::Base
     @game.attack(@game.current_player)
     @game.switch
     erb :attack
-
   end
 
   run! if app_file == $0
