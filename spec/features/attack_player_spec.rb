@@ -12,4 +12,11 @@ feature "player 1" do
     expect(page).not_to have_content "Gary: 60HP"
     expect(page).to have_content "Gary: 50HP"
   end
+
+  scenario "when player 2 attacks player 1, their HP is reduced by 10" do
+    sign_in_and_play
+    click_button "Attack"
+    click_button "Attack"
+    expect(page).to have_content "Charlie: 50HP"
+  end
 end
