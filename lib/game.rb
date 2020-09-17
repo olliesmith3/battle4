@@ -11,13 +11,12 @@ class Game
 
   def attack(player)
     player.take_damage
+    switch
   end
 
   def switch
     @player.reverse!
     @current_player = @player.first
-    
-    #@current_player = @player_2 if @current_player == @player_1
   end
 
 end
