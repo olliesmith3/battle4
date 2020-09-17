@@ -1,4 +1,4 @@
-require 'game'
+# require 'game'
 class Player
   attr_reader :name, :hp
 

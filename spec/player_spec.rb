@@ -1,7 +1,7 @@
 require "player"
 
 describe Player do
-  let(:game) {Game.new}
+  let(:game) {Game.new(charlie, gary)}
   subject(:charlie) { Player.new("Charlie") }
   subject(:gary) { Player.new("Gary") }
 
