@@ -10,6 +10,16 @@ class Game
     @not_current_player = @player.last
   end
 
+  def self.create(player_1, player_2)
+    @game = Game.new(player_1, player_2)
+  end
+
+  def self.instance
+    @game
+  end
+
+
+
   def attack(player)
     player.take_damage
     switch
