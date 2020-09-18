@@ -26,4 +26,17 @@ feature "player 1" do
     click_button "Attack"
     expect(page).to have_content "Gary's turn"
   end
+
+  scenario "displays Charlie attacked Gary" do
+    sign_in_and_play
+    click_button "Attack"
+    expect(page).to have_content "Charlie attacked Gary"
+  end
+
+  scenario "displays Gary attacked Charlie" do
+    sign_in_and_play
+    click_button "Attack"
+    click_button "Attack"
+    expect(page).to have_content "Gary attacked Charlie"
+  end
 end
