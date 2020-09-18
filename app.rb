@@ -34,7 +34,6 @@ class Battle < Sinatra::Base
 
   get "/game_over" do
     @game = $game
-    # when hp == 0
     erb :game_over
   end
 
