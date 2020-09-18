@@ -21,4 +21,6 @@ class Game
     @not_current_player = @player.last
   end
 
+
+
 end

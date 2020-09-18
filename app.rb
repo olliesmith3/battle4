@@ -25,7 +25,17 @@ class Battle < Sinatra::Base
   get "/attack" do
     @game = $game
     @game.attack(@game.current_player)
-    erb :attack
+    if @game.current_player.is_hp_zero?
+      redirect '/game_over'
+    else
+      erb :attack
+    end
+  end
+
+  get "/game_over" do
+    @game = $game
+    # when hp == 0
+    erb :game_over
   end
 
   run! if app_file == $0

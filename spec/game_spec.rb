@@ -18,4 +18,10 @@ describe Game do
       expect(game.player_1).to eq charlie
     end
   end
+
+  #describe '#is_hp_zero?' do
+  #  it 'checks if hp == 0' do
+  #    expect(new_game)
+  #  end
+  #end
 end

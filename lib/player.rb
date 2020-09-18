@@ -12,4 +12,8 @@ class Player
   def take_damage
     @hp -= 10
   end
+
+  def is_hp_zero?
+    @hp == 0
+  end
 end
